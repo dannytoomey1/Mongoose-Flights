@@ -23,9 +23,9 @@ function create(req, res) {
     Run.create(req.body);
     res.redirect(`/runs/index`);
     });
-  }
+}
 
-  function index(req, res) {
+function index(req, res) {
     Run.find({}, function(err, runs) {
         res.render('runs/index', {title: "All Runs", runs})
     })

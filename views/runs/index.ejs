@@ -15,7 +15,7 @@
       <tbody>
         <% runs.forEach(function(run) { %>
         <tr>
-          <% if (user && user._id.equals(run.user)) { %>
+          <% if (user && user._id.equals(run.user)) { %> 
           <td><%= run.day %></td>
           <td><%= run.distance %> miles</td>
           <td><%= run.time %> minutes</td>

@@ -1,11 +1,19 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const completedRepsSchema = new Schema ({
+    times: [],
+    repDistance: Number
+},  {
+    timestamps: true
+});
+
 const workoutSchema = new Schema({
     numReps: Number,
     goalPace: Number,
-    repDistance: [Number],
-    repTime: [Number],
+    repDistance: Number,
+    break: Number,
+    repTimes: completedRepsSchema,
     info: String,
     day: {
         type: Date,
